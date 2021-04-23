@@ -28,6 +28,7 @@ import math.question.task.R
 import math.question.task.databinding.ActivityBaseBinding
 import math.question.task.observer.OnAskUserAction
 import math.question.task.util.*
+import math.question.task.view.activity.addNewTask.AddNewTaskActivity
 import math.question.task.view.fragments.menu.MenuFragment
 import java.util.*
 import kotlin.properties.Delegates
@@ -50,10 +51,10 @@ abstract class BaseActivity(
 
     fun updateLocale() {
         //update activities locale
-        if (Preferences.getApplicationLocale().compareTo("en") == 0) {
-            forceLTRIfSupported()
-        } else {
+        if (Preferences.getApplicationLocale().compareTo("ar") == 0) {
             forceRTLIfSupported()
+        } else {
+            forceLTRIfSupported()
         }
         //Update the locale here before loading the layout to get localized strings for activity.
         LocaleHelper.updateLocale(this)
@@ -112,6 +113,10 @@ abstract class BaseActivity(
         }
 
         override fun onAny2ButtonClicked() {
+            Intent(this@BaseActivity, AddNewTaskActivity::class.java).also {
+                startActivity(it)
+                overridePendingTransition(R.anim.slide_from_right_to_left, R.anim.slide_in_left)
+            }
         }
 
         override fun onSearchClicked() {

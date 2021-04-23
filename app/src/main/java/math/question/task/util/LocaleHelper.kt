@@ -22,7 +22,7 @@ object LocaleHelper {
             }
         }*/
 
-        language = if (Preferences.getApplicationLocale().compareTo("en") == 0) "en" else "ar"
+        language = if (Preferences.getApplicationLocale().compareTo("ar") == 0) "ar" else "en"
         return language
     }
 

@@ -14,7 +14,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/padding_80"
-            android:src="@drawable/splash_logo" />
+            android:src="@drawable/ic_launcher_background" />
 
         <com.wang.avi.AVLoadingIndicatorView
             android:id="@+id/avLoadingIndicator_customProgressDialog"

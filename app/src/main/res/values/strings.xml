@@ -54,6 +54,15 @@
     <string name="logout_successfully_completed">Logout successfully completed</string>
     <string name="no_results">No Results</string>
     <string name="sorry_there_are_no_results">Sorry there are no results</string>
+    <string name="add_new_task">Add New Task</string>
+    <string name="first_number">First number</string>
+    <string name="second_number">Second Number</string>
+    <string name="operator">Operator</string>
+    <string name="delay_time_in_seconds">Delay Time in seconds</string>
+    <string name="calculate">Calculate</string>
+    <string name="required_field">Required field</string>
+    <string name="you_cant_divide_on_zero">You can\'t divide on Zero</string>
+    <string name="select_math_operator">Select math operator</string>
 
 </resources>
 

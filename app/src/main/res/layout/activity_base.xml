@@ -57,8 +57,7 @@
                             android:layout_gravity="center_vertical"
                             android:background="@drawable/circle_bg_transparent_with_transparent_gray_selector"
                             android:onClick="@{()->viewModel.onButtonMenuClicked()}"
-                            android:padding="@dimen/padding_10"
-                            android:src="@drawable/more_tab_normal" />
+                            android:padding="@dimen/padding_10" />
 
                         <ImageView
                             android:id="@+id/iv_back_icon_custom_action_bar"
@@ -96,7 +95,7 @@
                                 android:id="@+id/ivAnyIcon1CustomActionbar"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/notification_gray_icon" />
+                                android:src="@drawable/ic_action_add" />
 
                             <TextView
                                 android:id="@+id/tvNotifyAnyIcon1CustomActionbar"
