@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_errorCase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:src="@drawable/error_ice_creame_icon" />
+
+        <TextView
+            android:id="@+id/tvErrorTitle_connection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/padding_40"
+            android:layout_marginTop="@dimen/padding_40"
+            android:layout_marginEnd="@dimen/padding_40"
+            android:fontFamily="@font/avenir_heavy"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/oh_no"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_size_33" />
+
+        <TextView
+            android:id="@+id/tvErrorBody_connection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/padding_40"
+            android:layout_marginTop="@dimen/padding_15"
+            android:layout_marginEnd="@dimen/padding_40"
+            android:fontFamily="@font/avenir_heavy"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/padding_10"
+            android:includeFontPadding="false"
+            android:text="@string/server_connection_faild"
+            android:textColor="@color/taupe"
+            android:textSize="@dimen/font_size_16" />
+
+        <TextView
+            android:id="@+id/tvRetry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/padding_60"
+            android:layout_marginTop="@dimen/padding_40"
+            android:layout_marginBottom="@dimen/padding_20"
+            android:layout_marginEnd="@dimen/padding_60"
+            android:background="@drawable/round_corner_color_accent_selector"
+            android:drawablePadding="@dimen/padding_10"
+            android:fontFamily="@font/avenir_heavy"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="@dimen/padding_12"
+            android:text="@string/try_again"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+</layout>

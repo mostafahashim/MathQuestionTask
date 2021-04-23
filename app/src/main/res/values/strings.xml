@@ -1,3 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <string name="app_name">Math Question Task</string>
+    <string name="app_name" translatable="false">Math Question Task</string>
+    <string name="no_text" translatable="false"/>
+    <string name="default_notification_channel_id" translatable="false">math_question_task_default_channel</string>
+    <string name="default_notification_channel_name" translatable="false">math_question_task_news</string>
+    <string name="lorem_ipsum" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam,</string>
+    <string name="am">am</string>
+    <string name="pm">pm</string>
+    <string name="ago">ago</string>
+    <string name="second">second</string>
+    <string name="seconds">seconds</string>
+    <string name="min">min</string>
+    <string name="mins">mins</string>
+    <string name="hr">hr</string>
+    <string name="hrs">hrs</string>
+    <string name="in_2_days">in 2 days</string>
+    <string name="in_3_days">in 3 days</string>
+    <string name="in_4_days">in 4 days</string>
+    <string name="today">today</string>
+    <string name="tomorrow">tomorrow</string>
+    <string name="yesterday">yesterday</string>
+    <string name="just_now">just now</string>
+    <string name="_2_days_ago">2 days ago</string>
+    <string name="_3_days_ago">3 days ago</string>
+    <string name="_4_days_ago">4 days ago</string>
+    <string name="in">in</string>
+    <string name="minute">minute</string>
+    <string name="minutes">minutes</string>
+    <string name="hour">hour</string>
+    <string name="hours">hours</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="error_while_open_link">Error while open link</string>
+    <string name="share_via">Share via</string>
+    <string name="no_connection">No connection</string>
+    <string name="server_connection_faild">Server Connection Faild!</string>
+    <string name="something_went_wrong_please_try_again_">Something went wrong, Please try again.</string>
+    <string name="no_connection_tap_to_retry">No internet connection</string>
+    <string name="no_internet_connection">No internet connection, Please try again.</string>
+    <string name="you_are_offline">You are offline</string>
+    <string name="server_connection_failed">Server connection failed</string>
+    <string name="try_again">Try again</string>
+    <string name="error">Error</string>
+    <string name="press_again_to_exit">Press again to exit</string>
+    <string name="cancel">Cancel</string>
+    <string name="cancel_underline">
+    <u>Cancel</u></string>
+    <string name="ok">OK</string>
+    <string name="oh_no">Oh no!</string>
+    <string name="log_out">Log out</string>
+    <string name="are_you_sure_you_want_to_logout_and_clear_all_data_">Are you sure you want to logout, and clear all data?</string>
+    <string name="logout_successfully_completed">Logout successfully completed</string>
+    <string name="no_results">No Results</string>
+    <string name="sorry_there_are_no_results">Sorry there are no results</string>
+
 </resources>
+

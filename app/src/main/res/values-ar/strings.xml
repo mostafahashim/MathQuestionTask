@@ -1,0 +1,52 @@
+<resources>
+    <!-- time-->
+    <string name="today">اليوم</string>
+    <string name="am">ص</string>
+    <string name="pm">م</string>
+    <string name="ago">منذ</string>
+    <string name="second">ثانية</string>
+    <string name="seconds">ثواني</string>
+    <string name="min">دقيقة</string>
+    <string name="mins">دقائق</string>
+    <string name="hr">ساعة</string>
+    <string name="hrs">ساعات</string>
+    <string name="in_2_days">خلال يومان</string>
+    <string name="in_3_days">خلال 3 أيام</string>
+    <string name="in_4_days">خلال 4 أيام</string>
+    <string name="tomorrow">غدا</string>
+    <string name="yesterday">أمس</string>
+    <string name="just_now">الان</string>
+    <string name="_2_days_ago">من يومان</string>
+    <string name="_3_days_ago">منذ 3 ايام</string>
+    <string name="_4_days_ago">منذ 4 أيام</string>
+    <string name="in">في</string>
+    <string name="minute">دقيقة</string>
+    <string name="minutes">دقائق</string>
+    <string name="hour">ساعة</string>
+    <string name="hours">ساعات</string>
+
+    <string name="please_wait">يرجى الانتظار...</string>
+    <string name="error_while_open_link">خطأ عند فتح الرابط</string>
+    <string name="share_via">مشاركة عبر</string>
+    <string name="no_connection">خطأ في الاتصال</string>
+    <string name="you_are_offline">خطأ في الاتصال</string>
+    <string name="server_connection_faild">خطأ في الاتصال بالسرفر</string>
+    <string name="no_connection_tap_to_retry">حدث خطأ ما نرجو المحاولة مرة أخرى</string>
+    <string name="no_internet_connection">لا يوجد اتصال بالانترنت، حاول مرة اخرى</string>
+    <string name="server_connection_failed">خطأ في الاتصال بالسرفر</string>
+    <string name="try_again">إعادة المحاولة</string>
+    <string name="cancel">إلغاء</string>
+    <string name="ok">موافق</string>
+    <string name="logout_successfully_completed">تم تسجيل الخروج بنجاح</string>
+    <string name="are_you_sure_you_want_to_logout_and_clear_all_data_">هل أنت متأكد من تسجيل الخروج؟</string>
+    <string name="something_went_wrong_please_try_again_">حدث خطأ ما نرجو المحاولة مرة أخرى</string>
+
+    <string name="error">خطأ</string>
+    <string name="press_again_to_exit">اضغط ثانيا للخروج</string>
+    <string name="cancel_underline"><u>إلغاء</u></string>
+    <string name="oh_no">خطأ!</string>
+    <string name="log_out">تسجيل الخروج</string>
+    <string name="no_results">No Results</string>
+    <string name="sorry_there_are_no_results">Sorry there are no results</string>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avLoadingIndicator_customProgressDialog"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible"
+        app:indicatorColor="@color/white"
+        app:indicatorName="BallPulseIndicator" />
+
+    <TextView
+        android:id="@+id/tvMSG_customProgressDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_15"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/please_wait"
+        android:fontFamily="@font/avenir_medium"
+        android:textColor="@color/white"
+        android:includeFontPadding="false"
+        android:textSize="@dimen/font_size_16"
+        android:textStyle="normal" />
+</LinearLayout>
