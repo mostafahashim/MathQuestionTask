@@ -108,7 +108,7 @@ class AddNewTaskViewModel(
         } else if (isGetMyLocation.value!! && latitude == 0.0) {
             observer.onShowHideMessageDialog(
                 application.context.getString(R.string.location_required),
-            context.getString(R.string.please_open_location_or_wait_to_get_your_location),
+                application.context.getString(R.string.please_open_location_or_wait_to_get_your_location),
                 true
             )
         } else {
