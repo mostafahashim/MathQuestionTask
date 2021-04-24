@@ -113,6 +113,9 @@ abstract class BaseActivity(
         }
 
         override fun onAny2ButtonClicked() {
+        }
+
+        override fun onHomeButtonClicked() {
             Intent(this@BaseActivity, AddNewTaskActivity::class.java).also {
                 startActivity(it)
                 overridePendingTransition(R.anim.slide_from_right_to_left, R.anim.slide_in_left)

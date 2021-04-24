@@ -2,6 +2,7 @@ package math.question.task.view.activity.baseActivity
 
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import androidx.room.Room
 import math.question.task.MyApplication
 import math.question.task.R
 import math.question.task.util.Preferences
@@ -12,12 +13,19 @@ import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import math.question.task.model.database.AppDatabase
 import kotlin.coroutines.CoroutineContext
 
 open class BaseActivityViewModel(
     var application: MyApplication
 ) : AndroidViewModel(application) {
     lateinit var baseViewModelObserver: BaseViewModelObserver
+    var db: AppDatabase = Room.databaseBuilder(
+        application.applicationContext,
+        AppDatabase::class.java,
+        "MathQuestionsDB"
+    ).build()
+
     var keyWord = MutableLiveData<String>()
 
     var baseCompositeDisposable = CompositeDisposable()
@@ -40,6 +48,10 @@ open class BaseActivityViewModel(
 
     fun onButtonAny2Clicked() {
         baseViewModelObserver.onAny2ButtonClicked()
+    }
+
+    fun onButtonHomeClicked() {
+        baseViewModelObserver.onHomeButtonClicked()
     }
 
     fun onButtonSearchClicked() {
@@ -75,6 +87,7 @@ open class BaseActivityViewModel(
         fun onMenuButtonClicked()
         fun onAny1ButtonClicked()
         fun onAny2ButtonClicked()
+        fun onHomeButtonClicked()
         fun onSearchClicked()
         fun onLoginAgain()
         fun onRestartApp(message: Int)

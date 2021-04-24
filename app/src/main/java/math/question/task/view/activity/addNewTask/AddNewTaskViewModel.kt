@@ -4,6 +4,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import androidx.lifecycle.MutableLiveData
 import math.question.task.MyApplication
+import math.question.task.model.QuestionModel
 import math.question.task.util.AddOperator
 import math.question.task.util.DivideOperator
 import math.question.task.util.MultiplyOperator
@@ -97,13 +98,19 @@ class AddNewTaskViewModel(
         } else if (delayTime.value?.isEmpty()!!) {
             isShowDelayTimeError.value = true
         } else {
-
+            var questionModel = QuestionModel()
+            questionModel.firstNumber = firstNumber.value
+            questionModel.secondNumber = secondNumber.value
+            questionModel.operatorText = operator.value
+            questionModel.delayTime = delayTime.value?.toInt()!!
+            observer.setQuestionAlarm(questionModel)
         }
     }
 
 
     interface Observer {
         fun selectOperator()
+        fun setQuestionAlarm(questionModel: QuestionModel)
     }
 
 }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="math.question.task.model.QuestionModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layoutItemRecyclerService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginEnd="@dimen/padding_10"
+        android:paddingStart="@dimen/padding_30"
+        android:paddingTop="@dimen/padding_35"
+        android:paddingEnd="@dimen/padding_30"
+        android:paddingBottom="@dimen/padding_35"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/padding_10"
+        app:cardElevation="@dimen/padding_5"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/layoutItemRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_10"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/avenir_medium"
+                android:text="@{@string/problem_number_text(model.id)}"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/font_size_14" />
+
+
+            <TextView
+                android:id="@+id/tvFromPointNameItemRecyclerTicketHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/padding_5"
+                android:fontFamily="@font/avenir_medium"
+                android:text="@{@string/delay_text(model.delayTime)}"
+                android:textColor="@color/gray3"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/padding_10"
+                android:layout_marginBottom="@dimen/padding_10"
+                android:fontFamily="@font/avenir_heavy"
+                android:text="@{@string/problem_text(model.firstNumber,model.operator,model.secondNumber,model.answer)}"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/font_size_16" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
