@@ -15,9 +15,9 @@
         android:id="@+id/layoutItemRecyclerService"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginStart="@dimen/padding_10"
         android:layout_marginEnd="@dimen/padding_10"
+        android:orientation="vertical"
         android:paddingStart="@dimen/padding_30"
         android:paddingTop="@dimen/padding_35"
         android:paddingEnd="@dimen/padding_30"
@@ -67,7 +67,16 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/font_size_16" />
 
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/padding_10"
+                android:fontFamily="@font/avenir_medium"
+                android:text="@{@string/location_text(model.latitude,model.longitude)}"
+                android:textColor="@color/gray_black"
+                android:textSize="@dimen/font_size_12"
+                android:visibility="@{model.isShowLocation? View.VISIBLE:View.GONE}" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </layout>

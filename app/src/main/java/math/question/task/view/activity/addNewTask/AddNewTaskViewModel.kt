@@ -1,9 +1,11 @@
 package math.question.task.view.activity.addNewTask
 
+import android.location.Location
 import android.text.Editable
 import android.text.TextWatcher
 import androidx.lifecycle.MutableLiveData
 import math.question.task.MyApplication
+import math.question.task.R
 import math.question.task.model.QuestionModel
 import math.question.task.util.AddOperator
 import math.question.task.util.DivideOperator
@@ -27,7 +29,13 @@ class AddNewTaskViewModel(
     var operator = MutableLiveData<String>()
     var selectedOperatorPosition = -1
 
+    var isGetMyLocation = MutableLiveData<Boolean>()
+    var mLastKnownLocation: Location? = null
+    var latitude = 0.0
+    var longitude = 0.0
+
     init {
+        isGetMyLocation.value = false
         firstNumber.value = ""
         secondNumber.value = ""
         delayTime.value = ""
@@ -97,6 +105,12 @@ class AddNewTaskViewModel(
             isShowSecondNumberError.value = true
         } else if (delayTime.value?.isEmpty()!!) {
             isShowDelayTimeError.value = true
+        } else if (isGetMyLocation.value!! && latitude == 0.0) {
+            observer.onShowHideMessageDialog(
+                application.context.getString(R.string.location_required),
+            context.getString(R.string.please_open_location_or_wait_to_get_your_location),
+                true
+            )
         } else {
             var questionModel = QuestionModel()
             questionModel.firstNumber = firstNumber.value
@@ -109,6 +123,7 @@ class AddNewTaskViewModel(
 
 
     interface Observer {
+        fun onShowHideMessageDialog(title: String, message: String, isShow: Boolean)
         fun selectOperator()
         fun setQuestionAlarm(questionModel: QuestionModel)
     }

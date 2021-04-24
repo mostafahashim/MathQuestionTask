@@ -28,7 +28,7 @@ class MyApplication : Application() {
         super.onTrimMemory(level)
 //        val alarm =
 //            getSystemService(Context.ALARM_SERVICE) as AlarmManager
-//        alarm.setAlarmClock(this)
+//        alarm.setAlarmClock()
     }
 
     fun getDeviceId(): String {

@@ -64,9 +64,13 @@
     <string name="you_cant_divide_on_zero">You can\'t divide on Zero</string>
     <string name="select_math_operator">Select math operator</string>
     <string name="problem_text" translatable="false">Question:- %s %s %s = %s</string>
+    <string name="location_text" translatable="false">Location:- (%s, %s)</string>
     <string name="problem_number_text" translatable="false">Question Number:- %s</string>
     <string name="delay_text" translatable="false">Delay Time:- %s seconds</string>
     <string name="question_added_successfully">Question added successfully</string>
-
+    <string name="location_required" translatable="false">Location required</string>
+    <string name="you_must_enable_device_location_to_get_data_based_on_your_location" translatable="false">You must enable device location to get data based on your location</string>
+    <string name="locate_me">Locate Me</string>
+    <string name="please_open_location_or_wait_to_get_your_location">Please open location or wait to get your location</string>
 </resources>
 

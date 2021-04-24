@@ -58,5 +58,7 @@
     <string name="you_cant_divide_on_zero">You can\'t divide on Zero</string>
     <string name="select_math_operator">Select math operator</string>
     <string name="question_added_successfully">Question added successfully</string>
+    <string name="locate_me">Locate Me</string>
+    <string name="please_open_location_or_wait_to_get_your_location">Please open location or wait to get your location</string>
 
 </resources>

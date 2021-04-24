@@ -11,7 +11,7 @@ import math.question.task.model.QuestionModel
 
 class AlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        Log.i("AlarmReceiver", "Calculate")
+        Log.i("AlarmReceiver", "Start CalculateService")
         if (intent?.action == "Calculate") {
             val bundle = intent!!.extras
             var intent1 = Intent(context, CalculateService::class.java)
@@ -21,7 +21,6 @@ class AlarmReceiver : BroadcastReceiver() {
             } else {
                 context?.startService(intent1)
             }
-//            context?.startService(intent1)
         }
     }
 }

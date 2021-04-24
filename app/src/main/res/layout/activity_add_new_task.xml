@@ -153,6 +153,20 @@
                     app:addTextChangedListener="@{viewModel.delayTimeTextWatcher}" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/radiobuttonEnglishSettingActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_10"
+                android:checked="@={viewModel.isGetMyLocation()}"
+                android:fontFamily="@font/avenir_roman"
+                android:padding="@dimen/padding_8"
+                android:text="@string/locate_me"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/font_size_16"
+                app:buttonTint="@drawable/radiobutton_gray_orange_selector" />
+
+
             <TextView
                 android:id="@+id/tvCalculate"
                 android:layout_width="match_parent"
@@ -161,9 +175,9 @@
                 android:layout_marginBottom="@dimen/padding_30"
                 android:background="@drawable/round8_corner_bg_orange_selector"
                 android:fontFamily="@font/avenir_heavy"
-                android:padding="@dimen/padding_10"
                 android:gravity="center"
                 android:onClick="@{()->viewModel.onButtonCalculateClicked()}"
+                android:padding="@dimen/padding_10"
                 android:text="@string/calculate"
                 android:textColor="@color/white"
                 android:textSize="@dimen/font_size_16" />

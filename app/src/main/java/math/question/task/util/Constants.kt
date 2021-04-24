@@ -9,3 +9,5 @@ const val AddOperator = "Summation"
 const val SubOperator = "Subtraction"
 const val MultiplyOperator = "Multiplication"
 const val DivideOperator = "Division"
+
+const val LocationPermissionRequest = 500

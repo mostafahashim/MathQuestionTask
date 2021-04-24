@@ -136,24 +136,6 @@ class CalculateService : Service() {
         return null
     }
 
-    /*override fun onHandleIntent(intent: Intent?) {
-
-    }*/
-
-    /*override fun onHandleWork(intent: Intent) {
-        try {
-            val bundle = intent!!.extras
-            var questionModel = QuestionModel()
-            questionModel.firstNumber = bundle?.getString("firstNumber")
-            questionModel.secondNumber = bundle?.getString("secondNumber")
-            questionModel.operatorText = bundle?.getString("operatorText")
-            questionModel.delayTime = bundle?.getString("delayTime")?.toInt()!!
-            startForeground(questionModel)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }*/
-
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         super.onStartCommand(intent, flags, startId)
@@ -163,12 +145,17 @@ class CalculateService : Service() {
             questionModel.firstNumber = bundle?.getString("firstNumber")
             questionModel.secondNumber = bundle?.getString("secondNumber")
             questionModel.operatorText = bundle?.getString("operatorText")
-            questionModel.delayTime = bundle?.getString("delayTime")?.toInt()!!
+            questionModel.delayTime = bundle?.getString("delayTime")?.toInt() ?: 0
+            questionModel.isShowLocation = bundle?.getBoolean("isShowLocation", false)
+            if (questionModel.isShowLocation!!) {
+                questionModel.latitude = bundle?.getString("latitude")?.toDouble() ?: 0.0
+                questionModel.longitude = bundle?.getString("longitude")?.toDouble() ?: 0.0
+            }
             startCalculation(questionModel)
         } catch (e: Exception) {
             e.printStackTrace()
         }
-        return Service.START_STICKY
+        return START_STICKY
     }
 
 }
