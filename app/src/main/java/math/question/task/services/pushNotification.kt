@@ -1,5 +1,6 @@
 package math.question.task.services
 
+import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -12,7 +13,7 @@ import math.question.task.R
 import math.question.task.view.activity.main.MainActivity
 
 
-fun makeStatusNotification(message: String, context: Context) {
+fun makeStatusNotification(isForeground: Boolean, message: String, context: Context): Notification {
 
     var intent: Intent? = null
     intent = Intent(context, MainActivity::class.java)
@@ -57,5 +58,7 @@ fun makeStatusNotification(message: String, context: Context) {
         .setContentIntent(pendingIntent)
 
     // Show the notification
-    NotificationManagerCompat.from(context).notify(5000, builder.build())
+    NotificationManagerCompat.from(context)
+        .notify(if (isForeground) 4999 else 5000, builder.build())
+    return builder.build()
 }

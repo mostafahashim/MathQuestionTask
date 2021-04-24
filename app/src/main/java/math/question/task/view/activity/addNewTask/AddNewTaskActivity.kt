@@ -104,14 +104,15 @@ class AddNewTaskActivity : BaseActivity(
     }
 
     override fun setQuestionAlarm(questionModel: QuestionModel) {
-        var intent1 = Intent(this@AddNewTaskActivity, CalculateService::class.java)
+        var intent1 = Intent(this@AddNewTaskActivity, AlarmReceiver::class.java)
+        intent1.action = "Calculate"
         val bundle = Bundle()
         bundle.putString("firstNumber", questionModel.firstNumber)
         bundle.putString("secondNumber", questionModel.secondNumber)
         bundle.putString("operatorText", questionModel.operatorText)
         bundle.putString("delayTime", questionModel.delayTime.toString())
         intent1.putExtras(bundle)
-        var pendingIntent = PendingIntent.getService(
+        var pendingIntent = PendingIntent.getBroadcast(
             applicationContext,
             MathUtils.getRandomNumber(),
             intent1,
@@ -121,9 +122,9 @@ class AddNewTaskActivity : BaseActivity(
             getSystemService(Context.ALARM_SERVICE) as AlarmManager
         //start service only after given period
         var triggerTime =
-            SystemClock.elapsedRealtime() + (binding.viewModel!!.delayTime.value?.toInt()!! * 1000)
+            System.currentTimeMillis() + (binding.viewModel!!.delayTime.value?.toInt()!! * 1000)
         alarm.setExact(
-            AlarmManager.ELAPSED_REALTIME_WAKEUP,
+            AlarmManager.RTC_WAKEUP,
             triggerTime,
             pendingIntent
         )

@@ -1,5 +1,6 @@
 package math.question.task
 
+import android.app.AlarmManager
 import android.app.Application
 import android.content.Context
 import android.os.Build
@@ -21,6 +22,13 @@ class MyApplication : Application() {
         context = LocaleHelper.updateLocale(base)
         super.attachBaseContext(context)
         MultiDex.install(base)
+    }
+
+    override fun onTrimMemory(level: Int) {
+        super.onTrimMemory(level)
+//        val alarm =
+//            getSystemService(Context.ALARM_SERVICE) as AlarmManager
+//        alarm.setAlarmClock(this)
     }
 
     fun getDeviceId(): String {
